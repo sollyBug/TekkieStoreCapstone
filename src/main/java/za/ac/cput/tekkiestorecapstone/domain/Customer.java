@@ -7,9 +7,9 @@ public class Customer {
     private String mobileNumber;
     private Address address;
 
-    private Customer(){}
+    protected Customer(){}
 
-    protected Customer(Builder builder){
+    private Customer(Builder builder){
         this.customerId= builder.customerId;
         this.email= builder.email;
         this.name= builder.name;

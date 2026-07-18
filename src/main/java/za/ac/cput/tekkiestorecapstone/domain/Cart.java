@@ -4,9 +4,9 @@ public class Cart {
     private String cartId;
     private double totalAmount;
 
-    private Cart(){}
+    protected Cart(){}
 
-    protected Cart(Builder builder){
+    private Cart(Builder builder){
 
     }
 
