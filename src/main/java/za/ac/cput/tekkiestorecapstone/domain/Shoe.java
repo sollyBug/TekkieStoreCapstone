@@ -8,10 +8,10 @@ public class Shoe {
     private String category;
     private String description;
     private String gender;
-    private String basePrice;
+    private double basePrice;
 
     //Default constructor
-    public Shoe(){
+    protected Shoe(){
 
     }
 
@@ -46,8 +46,21 @@ public class Shoe {
     public String getGender() {
         return gender;
     }
-    public String getBasePrice() {
+    public double getBasePrice() {
         return basePrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Shoe{" +
+                "shoeId='" + shoeId + '\'' +
+                ", brand='" + brand + '\'' +
+                ", shoeName='" + shoeName + '\'' +
+                ", category='" + category + '\'' +
+                ", description='" + description + '\'' +
+                ", gender='" + gender + '\'' +
+                ", basePrice='" + basePrice + '\'' +
+                '}';
     }
 
     // Static Builder class that implements the Builder Design Pattern.
@@ -58,7 +71,7 @@ public class Shoe {
         private String category;
         private String description;
         private String gender;
-        private String basePrice;
+        private double basePrice;
 
         public Builder setShoeId(String shoeId) {
             this.shoeId = shoeId;
@@ -84,20 +97,20 @@ public class Shoe {
             this.gender = gender;
             return this;
         }
-        public Builder setBasePrice(String basePrice) {
+        public Builder setBasePrice(double basePrice) {
             this.basePrice = basePrice;
             return this;
         }
 
         //Copies values from an existing Admin object
-        public Builder copy(){
-            this.shoeId = shoeId;
-            this.brand = brand;
-            this.shoeName = shoeName;
-            this.category = category;
-            this.description = description;
-            this.gender = gender;
-            this.basePrice = basePrice;
+        public Builder copy(Shoe shoe){
+            this.shoeId = shoe.shoeId;
+            this.brand = shoe.brand;
+            this.shoeName = shoe.shoeName;
+            this.category = shoe.category;
+            this.description = shoe.description;
+            this.gender = shoe.gender;
+            this.basePrice = shoe.basePrice;
             return this;
         }
 
