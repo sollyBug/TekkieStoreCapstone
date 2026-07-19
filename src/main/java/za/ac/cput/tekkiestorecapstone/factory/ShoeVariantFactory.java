@@ -9,30 +9,24 @@ public class ShoeVariantFactory {
 
 
     public static ShoeVariant createShoeVariant(String variantId,
-                                                double sizeValue,
-                                                String sizeRegion,
+                                                ShoeSize size,
                                                 String colour,
-                                                int stockQuantity){
+                                                int stockQuantity) {
 
-        if(Helper.isNullOrEmpty(variantId)
-        || Helper.isNullOrEmpty(sizeRegion)
-        || Helper.isNullOrEmpty(colour)){
+        if (Helper.isNullOrEmpty(variantId)
+                || Helper.isNullOrEmpty(colour)) {
             return null;
         }
 
-     if (sizeValue <= 0 || stockQuantity < 0){
-         return null;
-     }
-        ShoeSize size = new ShoeSize.Builder()
-                .setSizeValue(sizeValue)
-                .setSizeRegion(sizeRegion)
-                .build();
+        if (size == null || stockQuantity < 0) {
+            return null;
+        }
 
-     return new ShoeVariant.Builder()
-             .setVariantId(variantId)
-             .setSize(size)
-             .setColour(colour)
-             .setStockQuantity(stockQuantity)
-             .build();
+        return new ShoeVariant.Builder()
+                .setVariantId(variantId)
+                .setSize(size)
+                .setColour(colour)
+                .setStockQuantity(stockQuantity)
+                .build();
     }
 }
