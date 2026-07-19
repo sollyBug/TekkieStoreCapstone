@@ -1,6 +1,10 @@
-package za.ac.cput.tekkiestorecapstone.service;
+/* IService.java
+IService model class
+Author: Lyle Solomons (230123872)
+Date: 19 July 2026
+*/
 
-import java.util.List;
+package za.ac.cput.tekkiestorecapstone.service;
 
 public interface IService <T, ID>{
     T create(T t);

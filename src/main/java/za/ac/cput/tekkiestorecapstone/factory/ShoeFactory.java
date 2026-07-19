@@ -1,3 +1,9 @@
+/* ShoeFactory.java
+ShoeFactory model class
+Author: Lyle Solomons (230123872)
+Date: 18 July 2026
+*/
+
 package za.ac.cput.tekkiestorecapstone.factory;
 
 import za.ac.cput.tekkiestorecapstone.domain.Shoe;

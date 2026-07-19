@@ -1,3 +1,9 @@
+/* ShoeServiceTest.java
+ShoeServiceTest model class
+Author: Lyle Solomons (230123872)
+Date: 19 July 2026
+*/
+
 package za.ac.cput.tekkiestorecapstone.service;
 
 import org.junit.jupiter.api.BeforeEach;

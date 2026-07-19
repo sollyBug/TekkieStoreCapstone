@@ -1,3 +1,9 @@
+/* Shoe.java
+Shoe model class
+Author: Lyle Solomons (230123872)
+Date: 18 July 2026
+*/
+
 package za.ac.cput.tekkiestorecapstone.domain;
 
 //represents a shoe entity in the system.
