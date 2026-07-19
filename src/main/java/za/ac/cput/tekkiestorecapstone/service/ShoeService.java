@@ -32,7 +32,8 @@ public class ShoeService implements IShoeService {
 
     @Override
     public boolean delete(String s) {
-        return this.repo.existsById(s);
+        this.repo.deleteById(s);
+        return true;
     }
 
     @Override
